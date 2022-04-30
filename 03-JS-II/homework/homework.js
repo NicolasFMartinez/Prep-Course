@@ -114,12 +114,13 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if(Math.floor==numero){
+  if(Math.floor(numero)==numero){
     return true;
   }else{
     return false;
   }
 }
+esEntero(50);
 
 function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3, devuelve "fizz"
@@ -170,36 +171,53 @@ function esPrimo(numero) {
     else{return true};
   }
 }
-
+esPrimo(10);
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-
+  if(valor=== true){
+    return "Soy verdadero";
+  }else{
+    return "Soy falso";
+  }
 }
-
+esVerdadero(true);
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
-  
+  //Escribe tu código aquí  
+  var tabla;
+  var arreglo=[];
+  for(let i=0;i<11;i++){
+    tabla = i*6;
+    arreglo.push(tabla);
+
+  } 
+  return arreglo;
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if (numero.length==3){
+  if (numero>99){
     return true ;
   }else{
     return false ;
   }
   
 }
-
+tieneTresDigitos(100);
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  let i = 0;
+  do{
+    i+=1;
+    numero=numero*5;
+  }while(i<9);
+  return numero;
 }
 
 
