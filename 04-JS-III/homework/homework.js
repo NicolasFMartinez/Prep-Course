@@ -10,7 +10,7 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  return array.length-1;
+  return array[array.length-1];
 }
 
 
@@ -62,17 +62,8 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var frase='';
-  var i=0;
-  var o='';
-  while(palabras.length>1){
-    frase=frase+palabras[i]+ o
-    if(i<palabras.length-1){
-      frase=frase+' ';
-    }
-    i++;
-  }
-  return frase ;
+  var cadena =palabras.join(" ");
+  return cadena; 
 }
 
 
@@ -80,6 +71,7 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  return array.include(elemento);
 }
 
 
@@ -87,6 +79,12 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var sumaNum=0;
+  for(num of numeros){
+    sumaNum+=num;
+    
+  }
+  return sumaNum;
 }
 
 
@@ -94,29 +92,61 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var sumapro=0;
+  var prome=resultadosTest.length;
+  var resultado;
+  for(pro of resultadosTest){
+    sumapro+=pro;
+  }
+  return resultado=sumapro/prome;
+
 }
+
 
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var numMax=0;
+  for(numem of numeros){
+    if(numem>numMax){
+      numMax=numem;
+    }else{
+      numMax=numMax;
+    }
+  }
+  return numMax;
 }
-
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if(arguments.length==0)
+  return 0;
+  var x = 1;
+  for(i=0;i<arguments.length;i++){
+    x=x*arguments[i];
+  }
+  return x;
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  var cuen=0;
+  for(mayor of arreglo){
+    if(mayor>18){
+      cuen++;
+    }else{
+        cuen=cuen;
+    }
+    return cuen;
+  }
 }
-
+cuentoElementos([1,19,21,3,6,22])
 
 function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
